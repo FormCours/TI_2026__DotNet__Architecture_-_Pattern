@@ -1,27 +1,27 @@
 # Architectures de déploiement
 
 ## Monolithe
-Tout l'application est construire comme un seul bloc.  
-Généralement avec une seul base de donnée.
+Toute l'application est construite comme un seul bloc.  
+Généralement avec une seule base de données.
 
 ### Force
 - Simple à dev, à maintenir, à tester.
-- Simple a déployer (un seul "package").
-- Les appels entre services sont stable et rapide
+- Simple à déployer (un seul "package").
+- Les appels entre services sont stables et rapides
 
 ### Limites
 - Il faut redéployer l'application à la moindre modification.
 - Difficile à upscaler.
-- Necessite de la rigueur pour éviter que ce soit un bordel.
+- Nécessite de la rigueur pour éviter que ce soit un bordel.
 
 
 ## Monolithe modulaire
-Même concept que le `Monolithe` (un seul bloc à déployer), par contre l'intérieur est découpé sous forme de module (technique ou métier).  
-Chaque module possède ses données et méthodes accessible. 
+Même concept que le `Monolithe` (un seul bloc à déployer), par contre l'intérieur est découpé sous forme de modules (techniques ou métier).  
+Chaque module possède ses données et méthodes accessibles. 
 
 ### Force
 - On conserve la simplicité de déploiement (un seul "package") du Monolithe
-- Le code est organisé sous forme de module.
+- Le code est organisé sous forme de modules.
 
 ### Limites
 - Idem que Monolithe
@@ -29,8 +29,8 @@ Chaque module possède ses données et méthodes accessible.
 
 
 ## Microservices
-L'application est composé de petits services indépendants.  
-Chaque services possede son propre environnement (serveur, db).  
+L'application est composée de petits services indépendants.  
+Chaque service possède son propre environnement (serveur, db).  
 
 Type de communication possible : 
 - Par réseau : HTTP
@@ -40,17 +40,17 @@ Type de communication possible :
 - Chaque service peut choisir sa technologie
 - Le déploiement est indépendant
     - Montée en charge (Puissance du serveur)
-    - L'arrêt d'un service n'entraine pas forcement l'arrêt d'autres services 
+    - L'arrêt d'un service n'entraîne pas forcément l'arrêt d'autres services 
 
 ### Limites
-- Necessite la mise en place d'un systeme de communication
+- Nécessite la mise en place d'un système de communication
     - Plus complexe
     - Sensible à la panne
-- Flux de communication entre service complexe (Transaction, deboguer)
+- Flux de communication entre services complexe (Transaction, déboguer)
 
 
 ## Serverless
-Le code est découpé en fonctions qui sont déclenchées par des évents et exécutées sur les plate-formes cloud (Azure function, AWS Lambda, ...).  
+Le code est découpé en fonctions qui sont déclenchées par des événements et exécutées sur les plateformes cloud (Azure function, AWS Lambda, ...).  
 Pas de gestion de serveur, on paie à l'utilisation.
 
 ### Forces
@@ -59,5 +59,5 @@ Pas de gestion de serveur, on paie à l'utilisation.
 
 ### Limites
 - Temps de démarrage.
-- Durée de execution "limité".
+- Durée d'exécution "limitée".
 - Dépendances au fournisseur cloud.
