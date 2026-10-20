@@ -14,9 +14,14 @@ Généralement avec une seule base de données.
 - Difficile à upscaler.
 - Nécessite de la rigueur pour éviter que ce soit un bordel.
 
+#### Variante « Monolithe hybride »
+L'application est construite en un seul bloc avec externalisation de certains fonctionnalité.  
+Exemple : 
+- Stockage de fichier
+- Utilisation de traitement Serverless
 
 ## Monolithe modulaire
-Même concept que le `Monolithe` (un seul bloc à déployer), par contre l'intérieur est découpé sous forme de modules (techniques ou métier).  
+Même concept que le `Monolithe` (un seul bloc à déployer), par contre l'intérieur est découpé sous forme de modules (métier).  
 Chaque module possède ses données et méthodes accessibles. 
 
 ### Force
